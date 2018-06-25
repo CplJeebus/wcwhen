@@ -4,6 +4,8 @@ import (
 	"encoding/json"
 	"fmt"
 	"strconv"
+	"github.com/ryanuber/columnize"
+
 )
 
 
@@ -37,21 +39,26 @@ func GetGroup (body []byte,group string ){
 	if err != nil {
 		fmt.Printf("%s", err)
 	}
-	//fmt.Println(string(body))
-	//fmt.Println(groups[0])
+
 	for i := range groups {
 		if groups[i].Group.Letter == group {
 		fmt.Printf("\n\n============================================\n")
 		fmt.Println("Group: " + groups[i].Group.Letter)
 		fmt.Printf("============================================\n")
+		var out []string
+		out = append(out,"| GP | W | D | L | P | GF | GA | GD")
 		for x := range groups[i].Group.Teams {
-		fmt.Println(groups[i].Group.Teams[x].Team.Country +
-			"\t\t" + strconv.Itoa(groups[i].Group.Teams[x].Team.GamesPlayed) +
-			"\t"	+ strconv.Itoa(groups[i].Group.Teams[x].Team.Wins) +
-			"\t" + strconv.Itoa(groups[i].Group.Teams[x].Team.Draws) +
-			"\t" + strconv.Itoa(groups[i].Group.Teams[x].Team.Losses) +
-			"\t" + strconv.Itoa(groups[i].Group.Teams[x].Team.Points))
+		out = append(out,groups[i].Group.Teams[x].Team.Country +
+			"|" + strconv.Itoa(groups[i].Group.Teams[x].Team.GamesPlayed) +
+			"|"	+ strconv.Itoa(groups[i].Group.Teams[x].Team.Wins) +
+			"|" + strconv.Itoa(groups[i].Group.Teams[x].Team.Draws) +
+			"|" + strconv.Itoa(groups[i].Group.Teams[x].Team.Losses) +
+			"|" + strconv.Itoa(groups[i].Group.Teams[x].Team.Points) +
+			"|" + strconv.Itoa(groups[i].Group.Teams[x].Team.GoalsFor) +
+			"|" + strconv.Itoa(groups[i].Group.Teams[x].Team.GoalsAgainst) +
+			"|" + strconv.Itoa(groups[i].Group.Teams[x].Team.GoalDifferential))
 		}
+			fmt.Println(columnize.SimpleFormat(out))
 	}
 	}
 }
