@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"sort"
+	"strconv"
 )
 
 type team struct {
@@ -51,6 +52,11 @@ func Getgames(bodyBytes []byte, Country string) {
 			evts[f].AwayTeam.Country == Country {
 			fmt.Printf("\n\n============================================\n")
 			fmt.Println(evts[f].HomeTeam.Country + " Vs " + evts[f].AwayTeam.Country)
+
+			if evts[f].Status != "future" {
+				fmt.Println("\nScore: " + strconv.Itoa(evts[f].HomeTeam.Goals) +
+					"-" + strconv.Itoa(evts[f].AwayTeam.Goals))
+			}
 
 			if len(evts[f].LastEventUpdateAt) == 0 {
 				fmt.Println("\nScheduled \t" + evts[f].Datetime)
