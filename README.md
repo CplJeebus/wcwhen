@@ -70,8 +70,13 @@ Scheduled 	2018-06-25T14:00:00Z
 
 ** Todo **
 ========
-* Refactor 
+* Refactor
+    * Have broken out into packages
+    * Now some parts can be simplified with smoother logic, less nested _ifs_
 * Figure out cli arguents to give smarter output
+    * Have added basic cli arguments using _flags_ but need to add something more robust
+* TDD?
+
 
 
 

@@ -69,9 +69,6 @@ func Getgames(bodyBytes []byte, Country string) {
 			var events []string
 
 			for x := range evts[f].HomeTeamEvents {
-				//fmt.Println("\t" + evts[f].HomeTeamEvents[x].Time + " " +
-				//	evts[f].HomeTeamEvents[x].TypeOfEvent +
-				//	" " + evts[f].HomeTeamEvents[x].Player)
 				events = append(events, evts[f].HomeTeamEvents[x].Time + " " +
 					evts[f].HomeTeamEvents[x].TypeOfEvent +
 					" " + evts[f].HomeTeamEvents[x].Player +
@@ -79,9 +76,6 @@ func Getgames(bodyBytes []byte, Country string) {
 			}
 
 			for x := range evts[f].AwayTeamEvents {
-				//fmt.Println(evts[f].AwayTeamEvents[x].Time + " " +
-				//	evts[f].AwayTeamEvents[x].TypeOfEvent +
-				//	" " + evts[f].AwayTeamEvents[x].Player)
 				events = append(events,evts[f].AwayTeamEvents[x].Time + " " +
 					evts[f].AwayTeamEvents[x].TypeOfEvent +
 					" " + evts[f].AwayTeamEvents[x].Player +
@@ -91,6 +85,7 @@ func Getgames(bodyBytes []byte, Country string) {
 			sort.Slice(events,func(i, j int) bool {
 				return events[i] < events[j]
 			})
+
 			for x := range events {
 				fmt.Println(events[x])
 			}
