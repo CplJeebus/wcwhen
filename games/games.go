@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"sort"
 	"strconv"
+	"strings"
 )
 
 type team struct {
@@ -87,7 +88,14 @@ func Getgames(bodyBytes []byte, Country string) {
 			})
 
 			for x := range events {
-				fmt.Println(events[x])
+				var eventline []string
+				eventline = strings.Split(events[x]," ")
+				if eventline[len(eventline)-1] == evts[f].HomeTeam.Country {
+					fmt.Println(events[x])
+				} else {
+					fmt.Println("\t" + events[x])
+				}
+
 			}
 		}
 	}
