@@ -4,68 +4,33 @@ Practise go app that takes a country as an argument and displays results from pr
 
 Grabs data from [here](http://worldcup.sfg.io/matches)
 
-``` wcwhen Russia ```
+``` wcwhen -g=Germany ```
 
 ```
 ============================================
-Russia Vs Saudi Arabia
+Germany Vs Mexico
 
-Last updated 	2018-06-21T02:36:44Z
+Score: 0-1
+
+Last updated 	2018-06-21T02:43:20Z
 ============================================
-	12' goal Iury GAZINSKY
-	24' substitution-in Denis CHERYSHEV
-	24' substitution-out Alan DZAGOEV
-	43' goal Denis CHERYSHEV
-	64' substitution-in Daler KUZIAEV
-	64' substitution-out Alexander SAMEDOV
-	70' substitution-in Artem DZYUBA
-	70' substitution-out Fedor SMOLOV
-	71' goal Artem DZYUBA
-	88' yellow-card Aleksandr GOLOVIN
-	90'+1' goal Denis CHERYSHEV
-	90'+4' goal Aleksandr GOLOVIN
-64' substitution-in FAHAD ALMUWALLAD
-64' substitution-out ABDULLAH OTAYF
-72' substitution-in HATAN BAHBIR
-72' substitution-out YAHIA ALSHEHRI
-72' substitution-in HATAN BAHBRI
-85' substitution-in MUHANNAD ASIRI
-85' substitution-out MOHAMMED ALSAHLAWI
-90'+3' yellow-card TAISEER ALJASSAM
-
-
-============================================
-Russia Vs Egypt
-
-Last updated 	2018-06-21T02:11:00Z
-============================================
-	59' goal Denis CHERYSHEV
-	62' goal Artem DZYUBA
-	74' substitution-out Denis CHERYSHEV
-	74' substitution-in Daler KUZIAEV
-	79' substitution-out Artem DZYUBA
-	79' substitution-in Fedor SMOLOV
-	84' yellow-card Fedor SMOLOV
-	86' substitution-out Yury ZHIRKOV
-	86' substitution-in Fedor KUDRIASHOV
-47' goal-own AHMED FATHI
-57' yellow-card TREZEGUET
-57' yellow-card TREZIGUET
-64' substitution-out MOHAMED ELNENY
-64' substitution-in AMR WARDA
-68' substitution-out TREZEGUET
-68' substitution-in RAMADAN SOBHY
-68' substitution-out TREZIGUET
-73' goal-penalty MOHAMED SALAH
-82' substitution-out MARWAN MOHSEN
-82' substitution-in KAHRABA
-
-
-============================================
-Uruguay Vs Russia
-
-Scheduled 	2018-06-25T14:00:00Z
-============================================
+35' goal Hirving  LOZANO Mexico
+40' yellow-card Hector MORENO Mexico
+58' substitution-in Edson ALVAREZ Mexico
+58' substitution-out Carlos VELA Mexico
+60' substitution-in Marco REUS Germany
+60' substitution-out Sami KHEDIRA Germany
+66' substitution-in Raul JIMENEZ Mexico
+66' substitution-out Hirving  LOZANO Mexico
+74' substitution-in Rafael MARQUEZ Mexico
+74' substitution-out Andres GUARDADO Mexico
+79' substitution-in Mario GOMEZ Germany
+79' substitution-out Marvin PLATTENHARDT Germany
+83' yellow-card Thomas MUELLER Germany
+84' yellow-card Mats HUMMELS Germany
+86' substitution-in Julian BRANDT Germany
+86' substitution-out Timo WERNER Germany
+90' yellow-card Hector HERRERA Mexico
 ```
 
 ** Todo **
