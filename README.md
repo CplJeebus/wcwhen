@@ -41,6 +41,7 @@ Last updated 	2018-06-21T02:43:20Z
 * Figure out cli arguents to give smarter output
     * Have added basic cli arguments using _flags_ but need to add something more robust
 * TDD?
+* Make dates locally TZ sensitive
 
 
 
