@@ -6,12 +6,12 @@ import (
 )
 
 type team struct {
-	Id int64 `json:"id"`
-	Country string `json:"country"`
-	Alternate_name string `json:"alternate_name"`
-	Fifa_code string `json:"fifa_code"`
-	Group_id int64 `json:"group_id"`
-	Group_letter string `json:"group_letter"`
+	Id            int64  `json:"id"`
+	Country       string `json:"country"`
+	AlternateName string `json:"alternate_name"`
+	FifaCode      string `json:"fifa_code"`
+	GroupId       int64  `json:"group_id"`
+	GroupLetter   string `json:"group_letter"`
 }
 
 
