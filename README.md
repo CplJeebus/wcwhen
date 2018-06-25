@@ -38,6 +38,9 @@ Last updated 	2018-06-21T02:43:20Z
 * Refactor
     * Have broken out into packages
     * Now some parts can be simplified with smoother logic, less nested _ifs_
+    * Things very bloaty, need to refactor main.
+* Feature request from people to lazy to join github.
+    * Can the game output be tabbed by home and away teams. 
 * Figure out cli arguents to give smarter output
     * Have added basic cli arguments using _flags_ but need to add something more robust
 * TDD?
