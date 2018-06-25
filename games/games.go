@@ -3,6 +3,7 @@ package games
 import (
 	"encoding/json"
 	"fmt"
+	"sort"
 )
 
 type team struct {
@@ -59,18 +60,34 @@ func Getgames(bodyBytes []byte, Country string) {
 
 			fmt.Printf("============================================\n")
 
+			var events []string
+
 			for x := range evts[f].HomeTeamEvents {
-				fmt.Println("\t" + evts[f].HomeTeamEvents[x].Time + " " +
+				//fmt.Println("\t" + evts[f].HomeTeamEvents[x].Time + " " +
+				//	evts[f].HomeTeamEvents[x].TypeOfEvent +
+				//	" " + evts[f].HomeTeamEvents[x].Player)
+				events = append(events, evts[f].HomeTeamEvents[x].Time + " " +
 					evts[f].HomeTeamEvents[x].TypeOfEvent +
-					" " + evts[f].HomeTeamEvents[x].Player)
+					" " + evts[f].HomeTeamEvents[x].Player +
+					" " + evts[f].HomeTeam.Country)
 			}
 
 			for x := range evts[f].AwayTeamEvents {
-				fmt.Println(evts[f].AwayTeamEvents[x].Time + " " +
+				//fmt.Println(evts[f].AwayTeamEvents[x].Time + " " +
+				//	evts[f].AwayTeamEvents[x].TypeOfEvent +
+				//	" " + evts[f].AwayTeamEvents[x].Player)
+				events = append(events,evts[f].AwayTeamEvents[x].Time + " " +
 					evts[f].AwayTeamEvents[x].TypeOfEvent +
-					" " + evts[f].AwayTeamEvents[x].Player)
+					" " + evts[f].AwayTeamEvents[x].Player +
+					" " + evts[f].AwayTeam.Country)
 			}
 
+			sort.Slice(events,func(i, j int) bool {
+				return events[i] < events[j]
+			})
+			for x := range events {
+				fmt.Println(events[x])
+			}
 		}
 	}
 }
