@@ -49,8 +49,8 @@ func Getgames(bodyBytes []byte, Country string) {
 
 	for f := range evts {
 
-		if evts[f].HomeTeam.Country == Country ||
-			evts[f].AwayTeam.Country == Country {
+		if strings.ToLower(evts[f].HomeTeam.Country) == strings.ToLower(Country) ||
+			strings.ToLower(evts[f].AwayTeam.Country) == strings.ToLower(Country) {
 			fmt.Printf("\n\n============================================\n")
 			fmt.Println(evts[f].HomeTeam.Country + " Vs " + evts[f].AwayTeam.Country)
 
