@@ -23,7 +23,7 @@ func GetTeams(body []byte) {
 		fmt.Printf("%s", err)
 	}
 	for i := range teams {
-	fmt.Println(teams[i].Country)
+	fmt.Println(teams[i].Country + " " + teams[i].GroupLetter)
 	}
 
 }
